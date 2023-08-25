@@ -29,18 +29,6 @@ export const create = async (req, res) => {
     try {
         let { firstName, lastName, email, title, cue, description } = req.body;
 
-        /*let usuario = await Usuario.create({
-            firstName,
-            lastName,
-            email,
-        });
-
-       await Bootcamp.create({
-            title, 
-            cue,
-            description,
-            usuarioId: usuario.id
-        });*/
         
         let usuario = await Usuario.create(
             {
@@ -61,19 +49,13 @@ export const create = async (req, res) => {
 
         }
         );
-       //await usuario.addBootcamps(Bootcamp);
+     
 
         console.log("usuario creado:", usuario);
 
         res.status(201).json({ code: 201, message: "usuario creado con éxito", usuario });
     } catch (error) {
-        /*let code = 500;
-        let message = "Error al crear al usuario en el sistema";
-        if (error.errors[0]) {
-            code = 400;
-            message = error.errors[0].message;
-
-        }*/
+      
 
         console.log(error);
         res.status(500).json({

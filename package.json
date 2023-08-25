@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nayareth Nain",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

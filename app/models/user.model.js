@@ -4,7 +4,7 @@ import sequelize from '../config/db.config.js'
 const Usuario = sequelize.define(
     "Usuarios", 
     {
-  // Model attributes are defined here
+
   firstName: {
     type: DataTypes.STRING(50),
     allowNull: false,
